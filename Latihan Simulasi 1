@@ -1,0 +1,42 @@
+#Algoritma A
+S_Awal=100000.0
+S_Selanjutnya=0.00001
+
+for _ in range(100000):
+  S_Awal += S_Selanjutnya
+  
+
+#Algoritma B
+Total=0.0
+
+S_Awal2=0.00001
+
+for _ in range(100000):
+  Total += S_Awal2
+Total += 100000.0
+
+
+#Hasil Teoritas
+N_sebenarnya = 100001.0
+
+S_Awal= 100000.0
+S_Selanjutnya=0.00001
+
+for _ in range(100000):
+  S_Awal += S_Selanjutnya
+
+Total = 0
+S_Awal2=0.00001
+x_selanjutnya1 = 100000.0
+
+for _ in range(100000):
+  Total += S_Awal2
+Total += x_selanjutnya1
+
+
+print("Hasil algoritma A adalah:", S_Awal)
+print("Hasil algoritma B adalah:", Total)
+print("Hasil teoritas adalah:", N_sebenarnya)
+print("Hasil algoritma A :", S_Awal - N_sebenarnya)
+print("Hasil algoritma B :", Total - N_sebenarnya)
+print("Hasil perbedaan A dan B:", S_Awal - Total)
